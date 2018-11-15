@@ -101,4 +101,4 @@ media
 media/*
 
 #credentials
-uploads/credentials/*
+uploads/credentials/

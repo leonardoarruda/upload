@@ -3,7 +3,12 @@
 {% block content %}
   <ul>
     <li>
-      <a href="{% url 'simple_upload' %}">Upload a file</a>
+      <a href="{% url 'add' %}">Upload a file</a>
     </li>
+  </ul>
+  <ul>
+    {% for value in blobs %}
+    <li>https://storage.googleapis.com/upload_files_leonardo/{{value.name}} - <a href="uploads/remove/?filename={{value.name}}">deletar</a></li>
+    {% endfor %}
   </ul>
 {% endblock %}
